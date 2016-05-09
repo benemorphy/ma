@@ -12,8 +12,8 @@ Template.postSubmit.events({
       // 显示错误信息并退出
       if (error)
         return alert(error.reason);
-//if (result.postExists)
-     //  return alert('This link has already been posted');
+if (result.postExists)
+       return alert('This link has already been posted');
       Router.go('postPage', {_id: result._id});
     });
     //Router.go('postPage', post);
