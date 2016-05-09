@@ -55,6 +55,10 @@ path格式
 >>未来能够渲染ppt页面
 >>*未来需要加入participate_id,以便将每个参与者显示出来*
 
+path格式
+>/meetings/rooms_list
+*未来根据参与者的id确定会议列表，以便更快进入*
+
 ## 数据驱动
 当前scene同步更新
 每次修改，comment，重新渲染当前scene，并且将comment存入数据库中。
