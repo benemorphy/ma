@@ -4,4 +4,9 @@ route
 >layout
 >>header
 >>>sign in 
-home
+
+>home
+
+## step 02
+
+username --> room_id
