@@ -1,17 +1,44 @@
 <template name="meetingroom">
-<div id="toolbar">
-		<input type="image"  id="chat"  src="\button\chat.png"/>		
-		<input type="image"  id="newnote" accesskey="n" src="\button\newnote.png"/>
-		<input type="image"  id="sketch"  accesskey="s" src="\button\sketch.png"/>
-		<input type="image"  id="cloud" accesskey="c" src="\button\cloud.png"/>
-		<input type="image" id="image"  accesskey="i" src="\button\image.png"/>
-		<input type="image"  id="help"  accesskey="k" src="\button\help.png"/>
-		</div>
+
+	<div id="toolbar" class="container">
+			 
+		  <ul class="nav nav-tab vertical-tab" role="tablist" id="vtab">
+
+		  <li>
+		  	<textarea id="message" ></textarea>
 		
-<h2>Meeting room</h2>
-  		<ul>
-  			<li>A meetiong platform </li>
-  			<li>Conference </li>
-  			<li>PPT showing and comment </li>
-  		</ul>	
+				<p id="pushmessage">message area </p>
+		  </li>
+		  <li>
+		  	<input type="image"  id="chat" role="tab"
+               data-toggle="tab" src="\button\chat.png"/>		
+		<input type="image"  id="newnote" role="tab"
+               data-toggle="tab" accesskey="n" src="\button\newnote.png"/>
+		  </li>
+		   <li>
+		   	<input type="image"  id="sketch" role="tab"
+               data-toggle="tab" accesskey="s" src="\button\sketch.png"/>
+		<input type="image"  id="cloud" accesskey="c" src="\button\cloud.png"/>
+		   </li>
+        <li>
+        
+       <input type="image" id="image"  accesskey="i" src="\button\image.png"/>
+		<input type="image"  id="help"  accesskey="k" src="\button\help.png"/>
+        </li>
+        <li>
+        	<input type="file" id="file"  onchange="readAsDataURL()"/>  
+		<input type="submit" 	id="paste" value = "Paste" />
+		<input type="submit"   id="sound_rec" value = "Sound" />
+		<p id="output"></p>
+		<p id="helpmsg">this is help area </p>
+        </li>
+        
+		  </ul>
+
+  		</div>
+ <div class="scenes">
+{{#each scenes}} 
+{{>sceneitem}}
+{{/each}} 	
+ </div>
 </template>
