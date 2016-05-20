@@ -19,17 +19,13 @@ Template.messages.helpers({
 })
 
 
-Template.scene_id.onCreated(function set_current_scene_id(){
-  
-var a=Scenes.findOne({type:"current_scene_id"})
-var b=a.current_scene_id;
-this.current_scene_id = new ReactiveVar(b);
-})
+
 
 
 Template.scene_id.helpers({
-  current_scene_id() {
-    return Template.instance().current_scene_id.get();
+  current_scene_id:function() {
+    var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id;
+    return scene_id;
   }
 })
 
@@ -38,21 +34,20 @@ Template.scene_id.helpers({
   //this.$('.container').packery({
 Template.scene_id.events({
   'click button#scene_id_1st'(event, instance){
-    instance.current_scene_id.set(0);
+    
     var id =Scenes.findOne({type:"current_scene_id"})._id;
   Scenes.update({_id:id},{$set:{current_scene_id:0}})
   },
   'click button#scene_id_pre'(event, instance){
-    var a=instance.current_scene_id.get()-1;
-    instance.current_scene_id.set(a);
+    var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id-1;
     var id =Scenes.findOne({type:"current_scene_id"})._id;
-    Scenes.update({_id:id},{$set:{current_scene_id:a}})
+    Scenes.update({_id:id},{$set:{current_scene_id:scene_id}})
   },
   'click button#scene_id_next'(event, instance){
-    var a=instance.current_scene_id.get()+1;
-    instance.current_scene_id.set(a);
+    var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id+1;
+    
     var id =Scenes.findOne({type:"current_scene_id"})._id;
-    Scenes.update({_id:id},{$set:{current_scene_id:a}})
+    Scenes.update({_id:id},{$set:{current_scene_id:scene_id}})
   }
 })
 
@@ -83,3 +78,5 @@ Template.scene_id.events({
   }
 
     }}
+
+    

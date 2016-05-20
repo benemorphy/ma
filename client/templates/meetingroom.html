@@ -25,7 +25,8 @@
 		<input type="image"  id="help"  accesskey="k" src="\button\help.png"/>
         </li>
         <li>
-        	<input type="file" id="file"  onchange="readAsDataURL()"/>  
+
+        	{{>imagefile}} 
 			<input type="submit" 	id="paste" value = "Paste" />
 			<input type="submit"   id="sound_rec" value = "Sound" />
 			<p id="output"></p>
@@ -64,5 +65,9 @@
 			<p id="current_scene_id">id:{{current_scene_id}}</p>
  			</div>
         </li>
+</template>
+
+<template name="imagefile">
+	<input type="file" id="file"  onchange="readAsDataURL()"/> 
 </template>
   
