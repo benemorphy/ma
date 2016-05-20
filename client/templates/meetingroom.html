@@ -31,22 +31,7 @@
 			<p id="output"></p>
 			<p id="helpmsg">this is help area </p>
         </li>
-        	<li>
- 	 			<button type= "button" id="scene_id_1st">1st</button>
- 	 			<button type= "button" id="scene_id_pre">pre</button>
- 	 			<button type= "button" id="scene_id_next">next</button>
- 	 			<button type= "button" id="scene_id_last">last</button>
- 				</li>
-        <li>
-        	<div id="current_scene_id" class="current_scene_id">
-
-			<div class="row">
-				{{#each current_scene_ids}}
-				{{>sceneitem}}
-				{{/each}}
- 			</div>
- 			</div>
-        </li>
+        	{{>scene_id}}
 		  </ul>
 <div>
 	<canvas id = "mainboard"></canvas>
@@ -66,3 +51,18 @@
     <strong>{{name}}:</strong> {{message}}<br>
   {{/each}}
   </template>
+<template name="scene_id">
+	<li>
+ 	 			<button type= "button" id="scene_id_1st">1st</button>
+ 	 			<button type= "button" id="scene_id_pre">pre</button>
+ 	 			<button type= "button" id="scene_id_next">next</button>
+ 	 			<button type= "button" id="scene_id_last">last</button>
+ 				</li>
+        <li>
+        	<div  >
+
+			<p id="current_scene_id">id:{{current_scene_id}}</p>
+ 			</div>
+        </li>
+</template>
+  
