@@ -1,13 +1,12 @@
+
 <template name="meetingroom">
 
-	<div id="toolbar" class="container">
-			 
-		  <ul class="nav nav-tab vertical-tab" role="tablist" id="vtab">
+	<div id="mainroom" class="container">
+			<div class="row">
+		  <ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar">
 
 		  <li>
-		  	<textarea id="message" ></textarea>
-		
-				<p id="pushmessage">message area </p>
+		  	<input type="text" id="message">		
 		  </li>
 		  <li>
 		  	<input type="image"  id="chat" role="tab"
@@ -27,18 +26,43 @@
         </li>
         <li>
         	<input type="file" id="file"  onchange="readAsDataURL()"/>  
-		<input type="submit" 	id="paste" value = "Paste" />
-		<input type="submit"   id="sound_rec" value = "Sound" />
-		<p id="output"></p>
-		<p id="helpmsg">this is help area </p>
+			<input type="submit" 	id="paste" value = "Paste" />
+			<input type="submit"   id="sound_rec" value = "Sound" />
+			<p id="output"></p>
+			<p id="helpmsg">this is help area </p>
         </li>
-        
-		  </ul>
+        	<li>
+ 	 			<button type= "button" id="scene_id_1st">1st</button>
+ 	 			<button type= "button" id="scene_id_pre">pre</button>
+ 	 			<button type= "button" id="scene_id_next">next</button>
+ 	 			<button type= "button" id="scene_id_last">last</button>
+ 				</li>
+        <li>
+        	<div id="current_scene_id" class="current_scene_id">
 
-  		</div>
- <div class="scenes">
-{{#each scenes}} 
-{{>sceneitem}}
-{{/each}} 	
- </div>
+			<div class="row">
+				{{#each current_scene_ids}}
+				{{>sceneitem}}
+				{{/each}}
+ 			</div>
+ 			</div>
+        </li>
+		  </ul>
+<div>
+	<canvas id = "mainboard"></canvas>
+</div>
+<div id="pushmessage">
+   {{>messages}}
+   </div>
+</div> 
+   		</div>
+
+  
 </template>
+
+<template name="messages">
+  	{{#each messages}}
+ 
+    <strong>{{name}}:</strong> {{message}}<br>
+  {{/each}}
+  </template>

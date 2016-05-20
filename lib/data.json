@@ -1,0 +1,28 @@
+Scenes.insert(
+{
+"meetingroom":"XFuKDFd5cLSKmQMe7",
+"type":"current_scene_id",
+ "room_id":"benechen",
+"current_scene_id":2,
+
+}
+)
+
+////////////
+Scenes.insert(
+{"meetingroom":"XFuKDFd5cLSKmQMe7",
+ "room_id":"benechen",
+"scenes_id":1,
+"title":"hello benechen "
+}
+)
+
+///////////
+Scenes.insert(
+{"meetingroom":"XFuKDFd5cLSKmQMe7",
+ "room_id":"meetwithbene",
+"scenes_id":3,
+"title":"meet with Chen 03 "
+}
+)
+
