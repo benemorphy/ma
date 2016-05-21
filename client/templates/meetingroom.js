@@ -40,6 +40,7 @@ Template.scene_id.events({
   },
   'click button#scene_id_pre'(event, instance){
     var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id-1;
+    //alert("-1");
     var id =Scenes.findOne({type:"current_scene_id"})._id;
     Scenes.update({_id:id},{$set:{current_scene_id:scene_id}})
   },
@@ -79,4 +80,3 @@ Template.scene_id.events({
 
     }}
 
-    

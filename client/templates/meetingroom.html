@@ -35,7 +35,8 @@
         	{{>scene_id}}
 		  </ul>
 <div>
-	<canvas id = "mainboard"></canvas>
+
+	{{>mainboard}}
 </div>
 <div id="pushmessage">
    {{>messages}}
@@ -68,6 +69,12 @@
 </template>
 
 <template name="imagefile">
-	<input type="file" id="file"  onchange="readAsDataURL()"/> 
+
+	<input type="file" id="file" >
+	<canvas id="canvas_invisible" hidden="true" width="640" height="360"></canvas>
 </template>
-  
+
+  <template name="mainboard">
+  <img id="img_background" src={{backimage}} width="640" height="360" >
+  	
+  </template>

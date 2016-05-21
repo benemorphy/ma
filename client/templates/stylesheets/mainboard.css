@@ -17,6 +17,17 @@
 		height:100%;
 		float:left;
 	}
+	img#img_background{
+		width:66%;
+					height:100%;
+					
+					background-color:#bbbbbb;
+					
+				
+					float:left;
+					margin:0%;
+					padding:0%;
+	}
 	canvas#mainboard{	width:66%;
 					height:100%;
 					
@@ -29,7 +40,7 @@
 				
 					}
 	ul#toolbar {		float:left;
-					width:18%;
+					width:16%;
 				height:100%;
 					border-color:#777777;
 					border-style: solid;
