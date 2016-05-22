@@ -17,26 +17,30 @@
 		height:100%;
 		float:left;
 	}
-	img#img_background{
-		width:66%;
-					height:100%;
+	img#img_background{ position:absolute;
+					width:66%;
+					height:66%;
 					
-					background-color:#bbbbbb;
+					
 					
 				
-					float:left;
+					left:18%;
+					top:0%;
 					margin:0%;
 					padding:0%;
 	}
-	canvas#mainboard{	width:66%;
-					height:100%;
+	canvas#paperjs_canvas{	
+					position:absolute;
+					width:66%;
+					height:66%;
 					
-					background-color:#bbbbbb;
+					
 					
 				
-					float:left;
+					left:18%;
+					top:0%;
 					margin:0%;
-					padding:0%;
+					padding:2%;
 				
 					}
 	ul#toolbar {		float:left;

@@ -78,5 +78,13 @@ Template.scene_id.events({
 
   }
 
-    }}
+    }};
 
+Template.meetingroom.onRendered(function(){
+  //paper.install(window);
+ paper.setup('paperjs_canvas');
+$('#sketch').click(function(){
+     console.log("sketch clicked")
+    $.getScript("/javascripts/paperjs_sketch.js")});
+//alert("here")
+})
