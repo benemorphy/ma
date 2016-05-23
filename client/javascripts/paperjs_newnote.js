@@ -1,0 +1,1 @@
+//paper.setup('paperjs_canvas');

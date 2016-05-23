@@ -34,10 +34,13 @@
         </li>
         	{{>scene_id}}
 		  </ul>
+		  <div>
+		  
+		  </div>
 <div>
-
+ 	<canvas id="receive_canvas"></canvas>	
 	{{>mainboard}}
-	<canvas id="paperjs_canvas"></canvas>
+	{{>sketchs}}
 </div>
 <div id="pushmessage">
    {{>messages}}
@@ -77,6 +80,10 @@
 </template>
 
   <template name="mainboard">
+
   <img id="img_background" src={{backimage}} width="640" height="360" >
-  	
+  
   </template>
+
+  
+  

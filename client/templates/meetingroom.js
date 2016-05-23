@@ -11,12 +11,7 @@ current_scene_ids:function(){
  
 })
 
-Template.messages.helpers({
-    messages: function() {
-      var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id;
-        return Scenes.find({type:"comment_message",scene_id:scene_id}, { sort: { time: -1}});
-    }
-})
+
 
 
 
@@ -82,9 +77,14 @@ Template.scene_id.events({
 
 Template.meetingroom.onRendered(function(){
   //paper.install(window);
- paper.setup('paperjs_canvas');
+  
+  $('#newnote').click(function(){
+ $.getScript("/javascripts/paperjs_newnote.js")});
 $('#sketch').click(function(){
-     console.log("sketch clicked")
+   //  console.log("sketch clicked")
     $.getScript("/javascripts/paperjs_sketch.js")});
 //alert("here")
 })
+
+
+

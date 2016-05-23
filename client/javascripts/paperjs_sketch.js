@@ -1,7 +1,7 @@
 		var tool=new paper.Tool();	
 		// Create a simple drawing tool:
 		
-			 console.log (tool);
+			// console.log (tool);
 			var path;
 		
 		tool.onMouseDown = function(event) {
@@ -24,8 +24,25 @@
 		tool.onMouseUp=function (event) {
   
 	path.simplify(10);
-	x=path.exportJSON(Object);
+	path.applyMatrix=true;
+	path.strokeJoin='round';
+	//var x=path.exportJSON(Object);
+	var x=path.exportJSON(Object);
+	console.log (x);
 	//alert (x);
+	var name = Scenes.findOne().room_id;
+      
+      
+        Scenes.insert({
+          type:"comment_sketch",
+          name: name,
+          sketch: x,
+          room_id:name,
+          time: Date.now(),
+          scene_id:Scenes.findOne({type:"current_scene_id"}).current_scene_id,
+      })
+        
+//paper.setup('paperjs_canvas');
 	//socket.emit ('imageuri_mark',{obj:x});
    
 }

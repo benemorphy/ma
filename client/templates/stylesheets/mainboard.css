@@ -20,10 +20,19 @@
 	img#img_background{ position:absolute;
 					width:66%;
 					height:66%;
-					
-					
-					
-				
+	
+					left:18%;
+					top:0%;
+					margin:0%;
+					padding:0%;
+	}
+
+
+	iframe#sketch{
+					 position:absolute;
+					width:66%;
+					height:66%;
+
 					left:18%;
 					top:0%;
 					margin:0%;
@@ -43,6 +52,21 @@
 					padding:2%;
 				
 					}
+
+	canvas#receive_canvas{	
+					position:absolute;
+					width:66%;
+					height:66%;
+					
+					
+					
+				
+					left:18%;
+					top:0%;
+					margin:0%;
+					padding:2%;
+				
+					}				
 	ul#toolbar {		float:left;
 					width:16%;
 				height:100%;
