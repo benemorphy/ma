@@ -19,8 +19,11 @@ current_scene_ids:function(){
 
 Template.scene_id.helpers({
   current_scene_id:function() {
-    var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id;
-    return scene_id;
+    var scene_id=Scenes.findOne({type:"current_scene_id"});
+    if (scene_id) {return scene_id.current_scene_id}
+      else { 
+        
+        return 0};
   }
 })
 
@@ -52,7 +55,7 @@ Template.scene_id.events({
 
  'keydown input#message' : function (event) {
  if (event.which == 13) { // 13 is the enter key event
-     
+     var room_id=Meteor.user().username;
         var name = Scenes.findOne().room_id;
       var message = document.getElementById('message');
 
@@ -69,22 +72,40 @@ Template.scene_id.events({
         document.getElementById('message').value = '';
         message.value = '';
       }
-    
-
-  }
-
-    }};
+}}
+  };
 
 Template.meetingroom.onRendered(function(){
   //paper.install(window);
   
+  
+///
+
   $('#newnote').click(function(){
  $.getScript("/javascripts/paperjs_newnote.js")});
 $('#sketch').click(function(){
-   //  console.log("sketch clicked")
+    console.log("sketch clicked")
+   
+
     $.getScript("/javascripts/paperjs_sketch.js")});
 //alert("here")
+});
+
+Template.meetingroom.onCreated(function(){
+ 
+ var scene_id=Scenes.findOne({type:"current_scene_id"});
+    
+    if (scene_id) {return scene_id.current_scene_id}
+      else { 
+        var room_id=Meteor.user().username;
+        var name = Meteor.user().username;
+        Scenes.insert({
+"meetingroom":"XFuKDFd5cLSKmQMe7",
+"type":"current_scene_id",
+ "room_id":name,
+"current_scene_id":0
+
 })
-
-
+};//end else
+})
 

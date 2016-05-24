@@ -3,12 +3,13 @@
 
 	<div id="mainroom" class="container">
 			<div class="row">
-		  <ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar">
+		  <ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar"> 
+		  <div>
+		  	<input type="text" id="message" >
 
+		 </div>
 		  <li>
-		  	<input type="text" id="message">		
-		  </li>
-		  <li>
+
 		  	<input type="image"  id="chat" role="tab"
                data-toggle="tab" src="\button\chat.png"/>		
 		<input type="image"  id="newnote" role="tab"
@@ -42,8 +43,12 @@
 	{{>mainboard}}
 	{{>sketchs}}
 </div>
-<div id="pushmessage">
-   {{>messages}}
+	<div id="pushmessage">
+		
+		 <div>
+   		{{>messages}}
+   		</div>
+
    </div>
 </div> 
 
@@ -53,10 +58,13 @@
 </template>
 
 <template name="messages">
+<div>
+		
   	{{#each messages}}
  
     <strong>{{name}}:</strong> {{message}}<br>
   {{/each}}
+ </div>>
   </template>
 <template name="scene_id">
 	<li>

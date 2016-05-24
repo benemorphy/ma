@@ -19,7 +19,7 @@ Template.sketch.helpers({
 		//var path = new paper.Path({});
 		//path.importJSON(this.sketch);
 		var x=this.sketch;
-	console.log(x);
+	//console.log(x);
        //x="\<circle id=\"redcircle\" cx=\"50\" cy=\"50\" r=\"50\" fill=\"red\" \/\>"
 		//return {path:x.substr(5,(x.length-7))};
 		var dummy = document.createElement('div');
