@@ -27,8 +27,11 @@
 	path.applyMatrix=true;
 	path.strokeJoin='round';
 	//var x=path.exportJSON(Object);
-	var x=path.exportJSON(Object);
+	var x=path.exportSVG({ asString: true});
+	
+	console.log("this is :");
 	console.log (x);
+	//console.log(x.toString());
 	//alert (x);
 	var name = Scenes.findOne().room_id;
       

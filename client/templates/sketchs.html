@@ -1,11 +1,20 @@
 <template name="sketchs">
   	<canvas id="paperjs_canvas"></canvas>	
+
   	{{#each sketchs}}
   	 {{>sketch}}
   	{{/each}}
   </template>
   <template name="sketch">
  
-  	<canvas id="receive_canvas"></canvas>	
-  	<p >{{display_sketch}}</p>
+  	<div id="sketch">
+  	
+
+  		
+  		{{{display_sketch}}}
+  		
+			
+
+  	</div>
+  	
   </template>
