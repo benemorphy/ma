@@ -5,6 +5,10 @@
 首页展示栏(设计服务展示)
 
 ##数据格式
+###是否增加时间线？
+>时间线及非时间线模式
+>基于场景的设计沟通，虚拟建造交流平台
+
 ##meeting
 meeting ={
 scenes:{collection of backround}
@@ -41,6 +45,7 @@ texts:{
 
 订阅相同meetingroonm_id
 >未来考虑公告牌，开放会议等等（无password）
+>公有，私有群
 >考虑note，vote机制
 
 ## 路由
@@ -48,9 +53,19 @@ texts:{
 path格式
 >/
 
+## container 及动态插入模块
+>3d模块
+>地图模块
+
+
+
 登录界面
 >meetingroom_id
 >password
+
+帮助文档
+>用户名：demo001
+>密码：demo001
 
 进入会议室
 path格式
@@ -76,4 +91,5 @@ path格式
 从原有annuus应用中虚拟出来,利用console.log
 
 
-
+##运维
+###日志
