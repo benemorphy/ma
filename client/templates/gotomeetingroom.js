@@ -1,6 +1,6 @@
-Template._loginButtonsLoggedInDropdown.events({
-    'click #login-buttons-edit-profile': function(event) {
+Template.gotomeetingroom.events({
+'click button#gotomeetingroom': function(event) {
         Router.go('meetingroom',{username:Meteor.user().username});
         //console.log (Meteor.user().username)
     }
-});
+})

@@ -34,7 +34,7 @@
 					width:72%;
 					height:72%;
 
-					left:12%;
+					left:0%;
 					top:0%;
 					margin:0%;
 					padding:0%;
@@ -116,5 +116,8 @@ input#message{
 	top:0%;
 	margin:0%;
 	padding:2%;
-	
+	z-index:100;
+}
+canvas#paperjs_canvas{
+	z-index: 300;
 }

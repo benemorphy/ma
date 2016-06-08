@@ -18,6 +18,7 @@
 //
 		tool.onMouseDrag = function(event) {
 			path.add(event.point);
+			console.log(event.point);
 		}
 		
 		tool.onMouseUp=function (event) {

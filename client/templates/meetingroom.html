@@ -1,58 +1,41 @@
 
 <template name="meetingroom">
 	<div id="mainroom" class="container">
-			<div class="row">
-		  <ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar"> 
-		  
-		  	{{>toolbar01}}
-        <li>
+		<div class="row">
+			<ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar">
+				{{>toolbar01}}
+				<li>
+					{{>imagefile}} 				
+					<p id="output"></p>
+					<p id="helpmsg">this is help area </p>
+				</li>
+				{{>scene_id}}
+			</ul>
+			<div id="main_container">
+				{{>mainboard}}
+				{{>sketchs}}
+			</div>
+			<div id="pushmessage">
+				<ul>
+					<li>
+						<div>
+							<input type="text" id="message" >
+						</div>
+					</li>
+					<li>
+						<div id="messages_container">
+							{{>messages}}
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div> 
 
-        	{{>imagefile}} 
-			
-			
-			
-			<p id="output"></p>
-			<p id="helpmsg">this is help area </p>
-        </li>
-        	{{>scene_id}}
-		  </ul>
-		  <div>
-		  
-		  </div>
-<div>
- 		
-	{{>mainboard}}
-	{{>sketchs}}
-</div>
-	<div id="pushmessage">
-		<ul>
-			<li>
-				<div>
-					<input type="text" id="message" >
-
-				</div>
-			</li>
-			<li>
-				<div>
-					{{>messages}}
-				</div>
-			</li>
-		</ul>
-   </div>
-</div> 
-
-   		</div>
+	</div>
 </template>
+<template name="mainboard">
 
-<template name="imagefile">
+	<img id="img_background" src={{backimage}} width="640" height="360" >
 
-	<input type="file" id="file" >
-	<canvas id="canvas_invisible" hidden="true" width="640" height="360"></canvas>
 </template>
-
-  <template name="mainboard">
-
-  <img id="img_background" src={{backimage}} width="640" height="360" >
-  
-  </template>
 
