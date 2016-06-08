@@ -1,21 +1,39 @@
 ##界面
-添加搜索栏？
-添加emoji表情
-服务（知识）体系图？
-首页展示栏(设计服务展示)
+	添加搜索栏？
+		添加emoji表情
+		角色，动作
+
+	服务（知识）体系图？
+	首页展示栏(设计服务展示)
+	展示目录，缩略图
 
 ##数据格式
 ###是否增加时间线？
->时间线及非时间线模式
->基于场景的设计沟通，虚拟建造交流平台
+	>时间线及非时间线模式
+	>基于场景的设计沟通，虚拟建造交流平台
 
-##meeting
+	>页面缩略图
+
+###场景模板
+	公有模板
+		ppt模板
+		数据可视化模板
+		地图模板
+		三维建造
+		角色对话模板	
+
+		>innerHTML--JSON
+
+	私有模板
+###meeting
 meeting ={
 scenes:{collection of backround}
 scenes_id:
 time_stamp:
 backround:image or ppt_page
 }
+
+>页面缩略图
 
 ##comments
 comments:{

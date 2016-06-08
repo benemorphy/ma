@@ -1,35 +1,16 @@
 
 <template name="meetingroom">
-
 	<div id="mainroom" class="container">
 			<div class="row">
 		  <ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar"> 
-		  <div>
-		  	<input type="text" id="message" >
-
-		 </div>
-		  <li>
-
-		  	<input type="image"  id="chat" role="tab"
-               data-toggle="tab" src="\button\chat.png"/>		
-		<input type="image"  id="newnote" role="tab"
-               data-toggle="tab" accesskey="n" src="\button\newnote.png"/>
-		  </li>
-		   <li>
-		   	<input type="image"  id="sketch" role="tab"
-               data-toggle="tab" accesskey="s" src="\button\sketch.png"/>
-		<input type="image"  id="cloud" accesskey="c" src="\button\cloud.png"/>
-		   </li>
-        <li>
-        
-       <input type="image" id="image"  accesskey="i" src="\button\image.png"/>
-		<input type="image"  id="help"  accesskey="k" src="\button\help.png"/>
-        </li>
+		  
+		  	{{>toolbar01}}
         <li>
 
         	{{>imagefile}} 
-			<input type="submit" 	id="paste" value = "Paste" />
-			<input type="submit"   id="sound_rec" value = "Sound" />
+			
+			
+			
 			<p id="output"></p>
 			<p id="helpmsg">this is help area </p>
         </li>
@@ -44,41 +25,23 @@
 	{{>sketchs}}
 </div>
 	<div id="pushmessage">
-		
-		 <div>
-   		{{>messages}}
-   		</div>
+		<ul>
+			<li>
+				<div>
+					<input type="text" id="message" >
 
+				</div>
+			</li>
+			<li>
+				<div>
+					{{>messages}}
+				</div>
+			</li>
+		</ul>
    </div>
 </div> 
 
    		</div>
-
-  <!-- <script type="text/javascript" src="javascripts/paper/paper.js"></script>-->
-</template>
-
-<template name="messages">
-<div>
-		
-  	{{#each messages}}
- 
-    <strong>{{name}}:</strong> {{message}}<br>
-  {{/each}}
- </div>>
-  </template>
-<template name="scene_id">
-	<li>
- 	 			<button type= "button" id="scene_id_1st">1st</button>
- 	 			<button type= "button" id="scene_id_pre">pre</button>
- 	 			<button type= "button" id="scene_id_next">next</button>
- 	 			<button type= "button" id="scene_id_last">last</button>
- 				</li>
-        <li>
-        	<div  >
-
-			<p id="current_scene_id">id:{{current_scene_id}}</p>
- 			</div>
-        </li>
 </template>
 
 <template name="imagefile">
@@ -93,5 +56,3 @@
   
   </template>
 
-  
-  

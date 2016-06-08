@@ -83,7 +83,7 @@ Template.meetingroom.onRendered(function(){
 
   $('#newnote').click(function(){
  $.getScript("/javascripts/paperjs_newnote.js")});
-$('#sketch').click(function(){
+$('#sketch_draw').click(function(){
     console.log("sketch clicked")
    
 

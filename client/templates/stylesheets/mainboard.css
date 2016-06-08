@@ -18,10 +18,10 @@
 		float:left;
 	}
 	img#img_background{ position:absolute;
-					width:66%;
-					height:66%;
+					width:72%;
+					height:72%;
 	
-					left:18%;
+					left:12%;
 					top:0%;
 					margin:0%;
 					padding:0%;
@@ -31,23 +31,23 @@
 
 	div#sketch{
 					 position:absolute;
-					width:66%;
-					height:66%;
+					width:72%;
+					height:72%;
 
-					left:18%;
+					left:12%;
 					top:0%;
 					margin:0%;
 					padding:0%;
 	}
 	canvas#paperjs_canvas{	
 					position:absolute;
-					width:66%;
-					height:66%;
+					width:72%;
+					height:72%;
 					
 					
 					
 				
-					left:18%;
+					left:12%;
 					top:0%;
 					margin:0%;
 					padding:2%;
@@ -56,20 +56,20 @@
 
 	canvas#receive_canvas{	
 					position:absolute;
-					width:66%;
-					height:66%;
+					width:72%;
+					height:72%;
 					
 					
 					
 				
-					left:18%;
+					left:12%;
 					top:0%;
 					margin:0%;
 					padding:2%;
 				
 					}				
 	ul#toolbar {		float:left;
-					width:16%;
+					width:12%;
 				height:100%;
 					border-color:#777777;
 					border-style: solid;
@@ -94,4 +94,27 @@ div#pushmessage{
 				height:400px;
 	background-color:#333344;
 	color: #ffffff;
+}
+input#message{
+	background-color:#333344;
+	color: #ffffff;
+}
+.glyphicon {
+	width:48%;
+	height: 42px;
+
+}
+.sketch{
+	position:absolute;
+	width:72%;
+	height:72%;
+	
+	
+	
+	
+	left:12%;
+	top:0%;
+	margin:0%;
+	padding:2%;
+	
 }
