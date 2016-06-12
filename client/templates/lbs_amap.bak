@@ -1,0 +1,20 @@
+var map = new AMap.Map('container', {
+        center: [110.397428, 30.90923],
+        layers: [new AMap.TileLayer.Satellite()],
+        zoom: 13
+    });
+
+var geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,
+            timeout: 10000,        
+            buttonOffset: new AMap.Pixel(10, 20),
+            zoomToAccuracy: false,      
+            buttonPosition:'RB'
+        });
+
+ var  map = new AMap.Map('container', {
+        zoom:15,
+        layers: [new AMap.TileLayer.Satellite()],
+        center:geolocation.getCurrentPosition(),
+        resizeEnable: true
+    });

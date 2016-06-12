@@ -1,6 +1,6 @@
 
 <template name="meetingroom">
-	<div id="mainroom" class="container">
+	<div id="mainroom" >
 		<div class="row">
 			<ul class="nav nav-tab vertical-tab" role="tablist" id="toolbar">
 				{{>toolbar01}}
@@ -14,6 +14,7 @@
 			<div id="main_container">
 				{{>mainboard}}
 				{{>sketchs}}
+				
 			</div>
 			<div id="pushmessage">
 				<ul>
@@ -36,6 +37,6 @@
 <template name="mainboard">
 
 	<img id="img_background" src={{backimage}} width="640" height="360" >
-
+	
 </template>
 

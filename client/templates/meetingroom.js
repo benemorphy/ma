@@ -77,17 +77,20 @@ Template.scene_id.events({
 
 Template.meetingroom.onRendered(function(){
   //paper.install(window);
-  
+//  PrintscreenJs.initialize('paperjs_canvas');
   
 ///
 
   $('#newnote').click(function(){
  $.getScript("/javascripts/paperjs_newnote.js")});
 $('#sketch_draw').click(function(){
-    console.log("sketch clicked")
-   
 
     $.getScript("/javascripts/paperjs_sketch.js")});
+$('#paste').click(function(){
+    console.log("paste clicked")
+   
+
+    $.getScript("/javascripts/printscreen.js")});
 //alert("here")
 });
 

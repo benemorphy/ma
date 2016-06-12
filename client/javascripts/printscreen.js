@@ -1,16 +1,12 @@
-Template.mainboard.helpers({
-	backimage:function(){
-		var scene_id=Scenes.findOne({type:"current_scene_id"}).current_scene_id;
-		var a=Scenes.findOne({type:"scene_background",scene_id:scene_id});
-		if (a) {return a.backimage}
-			else {return ""};
-	}
-})
+/**
+ * Printscreen.js v0.1.0
+ * https://github.com/vah7id/Printscreen.js
+ * MIT licensed
+ *
+ * Copyright (C) 2014 Vahid Taghizadeh (@vah7id)
+ */
 
-
-Template.mainboard.onRendered(function(){
-///
-PrintscreenJs = {
+var PrintscreenJs = {
     
     option: {
       _pasteCatcher: null,
@@ -49,7 +45,7 @@ PrintscreenJs = {
     },
 
     _eventListener: function(){
-        window.addEventListener("paste", this._pasteHandler);
+        window.addEventListener("copy", this._pasteHandler);
     },
 
     _pasteHandler: function(e){
@@ -110,7 +106,3 @@ PrintscreenJs = {
     }
 
 };
-///
-PrintscreenJs.initialize('img_background');
-///
-})
