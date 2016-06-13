@@ -10,7 +10,7 @@ Template.mainboard.helpers({
 
 Template.mainboard.onRendered(function(){
 ///
-PrintscreenJs = {
+var PrintscreenJs = {
     
     option: {
       _pasteCatcher: null,

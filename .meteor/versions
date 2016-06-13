@@ -30,7 +30,6 @@ email@1.0.12
 es5-shim@4.5.10
 fastclick@1.0.11
 geojson-utils@1.0.8
-glasser:jqueryui@2.0.0
 hot-code-push@1.0.4
 html-tools@1.0.9
 htmljs@1.0.9
@@ -56,7 +55,6 @@ meteor-base@1.0.4
 minifier-css@1.1.11
 minifier-js@1.1.11
 minimongo@1.0.16
-mizzao:build-fetcher@0.2.0
 mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.6.1
@@ -76,6 +74,7 @@ reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
 routepolicy@1.0.10
+ryanswapp:spectrum-colorpicker@0.0.1
 sacha:spin@2.3.1
 service-configuration@1.0.9
 session@1.1.5

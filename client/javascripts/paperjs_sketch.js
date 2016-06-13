@@ -5,12 +5,12 @@
 		console.log ("old tool had been removed")} ;
 		var tool=new paper.Tool();	
 			var path;
-		
+		//var current_color=$('#colorpicker')[0].value;
 		tool.onMouseDown = function(event) {
 	path = new paper.Path({
 			segments: [event.point],
 			strokeJoin: 'bevel',
-			strokeColor: 'red',
+			strokeColor: $('#colorpicker')[0].value,
 			strokeWidth: 3,
 			fullySelected: false
 	});
@@ -18,7 +18,6 @@
 //
 		tool.onMouseDrag = function(event) {
 			path.add(event.point);
-			console.log(event.point);
 		}
 		
 		tool.onMouseUp=function (event) {
