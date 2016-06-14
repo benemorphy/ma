@@ -11,7 +11,8 @@
 			segments: [event.point],
 			strokeJoin: 'bevel',
 			strokeColor: $('#colorpicker')[0].value,
-			strokeWidth: 3,
+			strokeWidth: $("#brush_width")[0].value,
+			opacity:($("#brush_opacity")[0].value)/100,
 			fullySelected: false
 	});
 		}

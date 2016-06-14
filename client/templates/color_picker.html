@@ -1,0 +1,27 @@
+<template name="color_picker">
+	
+
+	<button  id="layers"  role="tab" class="glyphicon glyphicon-list" aria-hidden="true" ></button>
+	<button  id="brush"  class="glyphicon glyphicon-tint" aria-hidden="true" role="tab"></button>
+	<input type="text" id="colorpicker">
+
+	<div id="dialog_brush" title="Brush Options">
+		<p>
+			<label for="brush_width">brush_width:</label>
+			<input type="text" id="brush_width" readonly style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+
+		<div id="brush_slider_vertical" style="height:200px;">
+		</div>
+		<p>
+			<label for="brush_opacity">brush_opacity:</label>
+			<input type="text" id="brush_opacity" readonly style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+
+		<div id="brush_opacity_slider_vertical" style="height:200px;">
+
+
+		</div>
+
+	</div>
+</template>

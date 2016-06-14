@@ -1,9 +1,9 @@
-Template.mainboard.onRendered(function(){
+Template.color_picker.onRendered(function(){
 ///
 
 $("#colorpicker").spectrum({
-	color: "#000",
-	showInput: true,
+	color: "#f00",
+	showInput: false,
 	className: "full-spectrum",
 	showInitial: true,
 	showPalette: true,
@@ -43,5 +43,46 @@ $("#colorpicker").spectrum({
 	]
 });
 
+$( "#brush_width" ).val(3);
 ///	
+$("#brush_slider_vertical").slider({
+	orientation: "vertical",
+	range: "min",
+	min: 0,
+	max: 20,
+	value:3,
+	slide: function( event, ui ) {
+        $( "#brush_width" ).val( ui.value );
+      }
+
+
+});
+///
+$( "#brush_opacity" ).val(100);
+///	
+$("#brush_opacity_slider_vertical").slider({
+	orientation: "vertical",
+	range: "min",
+	min: 0,
+	max: 100,
+	value:100,
+	slide: function( event, ui ) {
+        $( "#brush_opacity" ).val( ui.value );
+      }
+
+
+});
+
+})
+
+Template.color_picker.events({
+	'click button#brush'(event){
+
+//
+$( "#dialog_brush" ).dialog({});
+//$( "#slider-vertical").slider({ });
+
+//
+	} 
+
 })
