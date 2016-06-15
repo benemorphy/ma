@@ -79,7 +79,9 @@ Template.color_picker.events({
 	'click button#brush'(event){
 
 //
-$( "#dialog_brush" ).dialog({});
+$( "#dialog_brush" ).dialog({
+	width:400
+});
 //$( "#slider-vertical").slider({ });
 
 //

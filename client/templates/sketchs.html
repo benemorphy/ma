@@ -1,5 +1,6 @@
 <template name="sketchs">
   	<canvas id="paperjs_canvas"></canvas>	
+    <canvas id="paperjs_show"></canvas>
 
   	{{#each sketchs}}
   	 {{>sketch}}
@@ -7,13 +8,8 @@
   </template>
   <template name="sketch">
  
-  	<div >
-  	
-
-  		
-  		{{{display_sketch}}}
-  		
-			
+  	<div class="sketch_show">
+	{{{display_sketch}}}
 
   	</div>
   	

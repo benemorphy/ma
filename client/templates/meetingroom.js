@@ -86,11 +86,7 @@ Template.meetingroom.onRendered(function(){
 $('#sketch_draw').click(function(){
 
     $.getScript("/javascripts/paperjs_sketch.js")});
-$('#paste').click(function(){
-    console.log("paste clicked")
-   
 
-    $.getScript("/javascripts/printscreen.js")});
 //alert("here")
 });
 

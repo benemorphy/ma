@@ -62,6 +62,7 @@ var PrintscreenJs = {
                       var blob = items[i].getAsFile();
                       var URLObj = window.URL || window.webkitURL;
                       PrintscreenJs.option._srcCatched = URLObj.createObjectURL(blob);
+
                   }
               }
           }
@@ -92,6 +93,8 @@ var PrintscreenJs = {
       if(this.option._type == 'IMG'){
           var image = document.getElementById(this.option._el);
           image.src = this.option._srcCatched;
+          console.log(this.option._srcCatched);
+
       }
 
       else if(this.option._type == 'CANVAS'){
@@ -111,6 +114,12 @@ var PrintscreenJs = {
 
 };
 ///
-PrintscreenJs.initialize('img_background');
+PrintscreenJs.initialize('img_invisible');
 ///
+var img=document.getElementById('img_invisible');
+img.onload=function(){
+  console.log("img_invisible has loaded src");
+
+};
 })
+
