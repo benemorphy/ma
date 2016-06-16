@@ -82,8 +82,13 @@ div#pushmessage{
 	color: #ffffff;
 }
 input#message{
+	float:left;
 	background-color:#333344;
 	color: #ffffff;
+}
+div#messages_container{
+	float:left;
+
 }
 .glyphicon {
 	width:47%;

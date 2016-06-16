@@ -49,7 +49,7 @@ $("#brush_slider_vertical").slider({
 	orientation: "vertical",
 	range: "min",
 	min: 0,
-	max: 20,
+	max: 60,
 	value:3,
 	slide: function( event, ui ) {
         $( "#brush_width" ).val( ui.value );

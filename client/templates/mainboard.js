@@ -92,7 +92,6 @@ var PrintscreenJs = {
       if(this.option._type == 'IMG'){
           var image = document.getElementById(this.option._el);
           image.src = this.option._srcCatched;
-          console.log(this.option._srcCatched);
 
       }
 

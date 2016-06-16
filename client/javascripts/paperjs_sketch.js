@@ -29,14 +29,20 @@
 	var x=path.exportSVG({ asString: true});
 	//console.log(x);
 	var name = Scenes.findOne().room_id;
-       Scenes.insert({
+	var forbidden=["userguide","demo001","demo002","demo003","demo004","demo005","demo006"];
+	var username=Meteor.user().username;
+	if (!forbidden.indexOf(username)===-1){
+Scenes.insert({
          type:"comment_sketch",
          name: name,
          sketch: x,
          room_id:name,
          time: Date.now(),
          scene_id:Scenes.findOne({type:"current_scene_id"}).current_scene_id,
-     })
+     });
+
+	};
+       
        path.remove();
        
         //tool.remove();

@@ -15,22 +15,23 @@
 			<div id="main_container">
 				{{>mainboard}}
 				{{>sketchs}}
+				<div id="pushmessage">
+
+
+					<div>
+						<input type="text" id="message" >
+					</div>
+
+
+					<div id="messages_container">
+						{{>messages}}
+					</div>
+
+					
+				</div>
 				
 			</div>
-			<div id="pushmessage">
-				<ul>
-					
-						<div>
-							<input type="text" id="message" >
-						</div>
-					
-					
-						<div id="messages_container">
-							{{>messages}}
-						</div>
-					
-				</ul>
-			</div>
+			
 		</div> 
 
 	</div>

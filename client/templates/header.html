@@ -1,14 +1,18 @@
 <template name="header">
-<div class="collapse navbar-collapse" id="navigation">
-<a class="navbar-brand" href="{{pathFor 'home'}}">Home</a>
-{{#if currentUser}}<a class="navbar-brand" href="{{pathFor 'gotomeetingroom'}}">GotoMeeting</a>{{/if}}
-<a class="navbar-brand" href="{{pathFor 'userguide'}}">Userguide</a>
-<a class="navbar-brand" href="{{pathFor 'demo'}}">Demo</a>
-<a class="navbar-brand" href="{{pathFor 'contactus'}}">ContactUs</a>
-        	<ul class="nav navbar-nav navbar-right">
-          {{> loginButtons}}
-        	</ul>
-     	</div>
 	
-  		
+	<ul class="nav nav-tabs">
+		<li role="presentation" ><a class="navbar-brand"   href="{{pathFor 'home'}}">Home</a></li>
+		<li role="presentation">{{#if currentUser}}<a class="navbar-brand"  role="presentation" href="{{pathFor 'gotomeetingroom'}}">GotoMeeting</a>{{/if}}</li>
+		<li role="presentation"><a class="navbar-brand" href="{{pathFor 'userguide'}}">Userguide</a></li>
+		<li role="presentation"><a class="navbar-brand" href="{{pathFor 'demo'}}">Demo</a></li>
+		<li role="presentation"><a class="navbar-brand" href="{{pathFor 'contactus'}}">ContactUs</a></li>
+		<li role="presentation">
+			<ul class="nav navbar-nav navbar-right">
+				{{> loginButtons}}
+			</ul>
+		</li>
+	</ul>
+	
+	
+
 </template>
