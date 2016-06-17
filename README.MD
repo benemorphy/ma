@@ -4,3 +4,7 @@ data drived
 
 
 ## for demo please visit 52.69.2.194:3000
+
+###LICENSE
+
+####MIT
