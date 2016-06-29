@@ -42,7 +42,7 @@ Template.imagefile.events({
 	  var c=Scenes.findOne({type:"scene_background",scene_id:scene_id});
 	  var forbidden=["userguide","demo001","demo002","demo003","demo004","demo005","demo006"];
 	var username=Meteor.user().username;
-	if (!forbidden.indexOf(username)===-1) {
+	if (forbidden.indexOf(username)===-1) {
 	 // alert (c._id);
 	 if (c)
 	 	{var id=c._id;

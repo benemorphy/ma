@@ -32,4 +32,9 @@ person.prototype->++Object {}
 			__proto__:Object++
   
   
-  
+  ##mongo_url
+  >meteor mongo mongodb://host/meteor
+  (host=127.0.0.1:27017)
+   If it can discover the local server's MONGO_URL or it's set in the ENV, then it could set it for you
+   aliyun:http://121.196.207.10:3000/
+   

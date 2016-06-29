@@ -31,7 +31,7 @@
 	var name = Scenes.findOne().room_id;
 	var forbidden=["userguide","demo001","demo002","demo003","demo004","demo005","demo006"];
 	var username=Meteor.user().username;
-	if (!forbidden.indexOf(username)===-1){
+	if (forbidden.indexOf(username)===-1){
 Scenes.insert({
          type:"comment_sketch",
          name: name,
